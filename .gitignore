@@ -1,0 +1,20 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.DS_Store
+results/*.jsonl
+outputs/
+data/history/*.jsonl
+.coverage
+htmlcov/
+
+# Local credentials and private key material
+credentials*.json
+secrets*.json
+secrets*.toml
+*.pem
+*.key

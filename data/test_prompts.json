@@ -1,0 +1,570 @@
+[
+  {
+    "id": "IF-001",
+    "category": "instruction_following",
+    "language": "en",
+    "prompt": "Explain DNS in exactly three sentences.",
+    "rules": {
+      "exact_sentences": 3
+    }
+  },
+  {
+    "id": "IF-002",
+    "category": "instruction_following",
+    "language": "en",
+    "prompt": "Give exactly five bullet points explaining the benefits of cloud computing.",
+    "rules": {
+      "exact_bullets": 5
+    }
+  },
+  {
+    "id": "IF-003",
+    "category": "instruction_following",
+    "language": "en",
+    "prompt": "Explain what an API is in exactly two sentences and include the term endpoint.",
+    "rules": {
+      "exact_sentences": 2,
+      "required_terms": [
+        "endpoint"
+      ]
+    }
+  },
+  {
+    "id": "AR-001",
+    "category": "instruction_following",
+    "language": "ar",
+    "prompt": "اشرح الفرق بين RAM وSSD في أربع نقاط فقط وبأسلوب بسيط.",
+    "rules": {
+      "exact_bullets": 4
+    }
+  },
+  {
+    "id": "AR-002",
+    "category": "instruction_following",
+    "language": "ar",
+    "prompt": "اشرح وظيفة DNS في جملتين فقط، ولا تستخدم كلمة سيرفر.",
+    "rules": {
+      "exact_sentences": 2,
+      "forbidden_terms": [
+        "سيرفر"
+      ]
+    }
+  },
+  {
+    "id": "FMT-001",
+    "category": "formatting",
+    "language": "en",
+    "prompt": "Return valid JSON only with two keys: name and role. Use name=Ahmed and role=Engineer.",
+    "rules": {
+      "must_be_json": true,
+      "required_terms": [
+        "Ahmed",
+        "Engineer"
+      ]
+    }
+  },
+  {
+    "id": "FMT-002",
+    "category": "formatting",
+    "language": "en",
+    "prompt": "List exactly three troubleshooting steps for a printer offline issue as bullet points.",
+    "rules": {
+      "exact_bullets": 3
+    }
+  },
+  {
+    "id": "FMT-003",
+    "category": "formatting",
+    "language": "ar",
+    "prompt": "اكتب ثلاث خطوات فقط لحل مشكلة عدم وجود إنترنت، وكل خطوة في نقطة منفصلة.",
+    "rules": {
+      "exact_bullets": 3
+    }
+  },
+  {
+    "id": "LIM-001",
+    "category": "constraint_following",
+    "language": "en",
+    "prompt": "Explain artificial intelligence in no more than 50 words.",
+    "rules": {
+      "max_words": 50
+    }
+  },
+  {
+    "id": "LIM-002",
+    "category": "constraint_following",
+    "language": "en",
+    "prompt": "Describe SSD wear in no more than 35 words and include TBW.",
+    "rules": {
+      "max_words": 35,
+      "required_terms": [
+        "TBW"
+      ]
+    }
+  },
+  {
+    "id": "FORB-001",
+    "category": "constraint_following",
+    "language": "en",
+    "prompt": "Explain machine learning without using the word algorithm.",
+    "rules": {
+      "forbidden_terms": [
+        "algorithm"
+      ]
+    }
+  },
+  {
+    "id": "FORB-002",
+    "category": "constraint_following",
+    "language": "ar",
+    "prompt": "اشرح النسخ الاحتياطي باختصار من غير استخدام كلمة سحابة.",
+    "rules": {
+      "forbidden_terms": [
+        "سحابة"
+      ]
+    }
+  },
+  {
+    "id": "TR-001",
+    "category": "translation",
+    "language": "en-ar",
+    "prompt": "Translate to Arabic but keep the technical terms API, DNS, and TCP/IP in English: The API uses DNS before opening a TCP/IP connection.",
+    "rules": {
+      "required_terms": [
+        "API",
+        "DNS",
+        "TCP/IP"
+      ]
+    }
+  },
+  {
+    "id": "TR-002",
+    "category": "translation",
+    "language": "ar-en",
+    "prompt": "Translate into English and keep NVMe unchanged: الهارد من نوع NVMe أسرع في نقل البيانات.",
+    "rules": {
+      "required_terms": [
+        "NVMe"
+      ]
+    }
+  },
+  {
+    "id": "EX-001",
+    "category": "extraction",
+    "language": "en",
+    "prompt": "Extract only the person names and dates from this sentence: Ahmed met Sara on 12 May 2026, and Omar joined them on 14 May 2026.",
+    "rules": {
+      "required_terms": [
+        "Ahmed",
+        "Sara",
+        "Omar",
+        "12 May 2026",
+        "14 May 2026"
+      ]
+    }
+  },
+  {
+    "id": "EX-002",
+    "category": "extraction",
+    "language": "ar",
+    "prompt": "استخرج أسماء الأجهزة فقط من النص التالي: تم فحص Laptop Dell وPrinter HP ثم إعادة تشغيل Router TP-Link.",
+    "rules": {
+      "required_terms": [
+        "Laptop Dell",
+        "Printer HP",
+        "Router TP-Link"
+      ]
+    }
+  },
+  {
+    "id": "QA-001",
+    "category": "question_answering",
+    "language": "en",
+    "prompt": "What is the main purpose of DHCP in an IPv4 network? Answer in one sentence.",
+    "rules": {
+      "exact_sentences": 1
+    }
+  },
+  {
+    "id": "QA-002",
+    "category": "question_answering",
+    "language": "ar",
+    "prompt": "ما وظيفة Active Directory الأساسية في بيئة Windows Domain؟ أجب في جملة واحدة.",
+    "rules": {
+      "exact_sentences": 1
+    }
+  },
+  {
+    "id": "SUM-001",
+    "category": "summarization",
+    "language": "en",
+    "prompt": "Summarize this in exactly two sentences: A help desk receives incidents from users, categorizes them, prioritizes them based on impact and urgency, resolves common issues, escalates complex cases, and documents the final resolution for future reuse.",
+    "rules": {
+      "exact_sentences": 2
+    }
+  },
+  {
+    "id": "SUM-002",
+    "category": "summarization",
+    "language": "ar",
+    "prompt": "لخص النص التالي في نقطتين فقط: النسخ الاحتياطي يقلل مخاطر فقد البيانات، ويجب اختبار الاستعادة دوريًا، والاحتفاظ بنسخة منفصلة عن الجهاز الأساسي.",
+    "rules": {
+      "exact_bullets": 2
+    }
+  },
+  {
+    "id": "MIX-001",
+    "category": "mixed_constraints",
+    "language": "en",
+    "prompt": "Explain MFA in exactly three bullet points, use no more than 45 words total, and include the phrase second factor.",
+    "rules": {
+      "exact_bullets": 3,
+      "max_words": 45,
+      "required_terms": [
+        "second factor"
+      ]
+    }
+  },
+  {
+    "id": "MIX-002",
+    "category": "mixed_constraints",
+    "language": "ar",
+    "prompt": "اشرح الفرق بين HDD وSSD في ثلاث نقاط فقط وبحد أقصى 60 كلمة، ويجب ذكر كلمة latency بالإنجليزية.",
+    "rules": {
+      "exact_bullets": 3,
+      "max_words": 60,
+      "required_terms": [
+        "latency"
+      ]
+    }
+  },
+  {
+    "id": "MIX-003",
+    "category": "mixed_constraints",
+    "language": "en",
+    "prompt": "Return valid JSON only describing a network incident with keys severity and action. severity must be high and action must contain isolate.",
+    "rules": {
+      "must_be_json": true,
+      "required_terms": [
+        "high",
+        "isolate"
+      ]
+    }
+  },
+  {
+    "id": "MIX-004",
+    "category": "mixed_constraints",
+    "language": "ar",
+    "prompt": "اكتب خطوتين فقط لتأمين حساب بريد إلكتروني، ولا تستخدم كلمة password، ويجب ذكر MFA.",
+    "rules": {
+      "exact_bullets": 2,
+      "forbidden_terms": [
+        "password"
+      ],
+      "required_terms": [
+        "MFA"
+      ]
+    }
+  },
+  {
+    "id": "RSN-001",
+    "category": "reasoning",
+    "language": "en",
+    "prompt": "A help desk has 12 open tickets. Five are resolved and three new tickets arrive. How many remain open? Answer with the number and one short sentence.",
+    "rules": {
+      "required_terms": [
+        "10"
+      ]
+    }
+  },
+  {
+    "id": "RSN-002",
+    "category": "reasoning",
+    "language": "ar",
+    "prompt": "لدى فريق الدعم 20 بلاغًا، تم حل 8 ووصلت 4 بلاغات جديدة. كم بلاغًا مفتوحًا الآن؟ اذكر الرقم في جملة واحدة.",
+    "rules": {
+      "exact_sentences": 1,
+      "required_terms": [
+        "16"
+      ]
+    }
+  },
+  {
+    "id": "RSN-003",
+    "category": "reasoning",
+    "language": "en",
+    "prompt": "If every switch is a network device and device X is a switch, state the valid conclusion in exactly one sentence.",
+    "rules": {
+      "exact_sentences": 1
+    }
+  },
+  {
+    "id": "RSN-004",
+    "category": "reasoning",
+    "language": "ar",
+    "prompt": "إذا كان كل SSD وحدة تخزين، والجهاز X يحتوي على SSD، اذكر الاستنتاج المنطقي في جملة واحدة فقط.",
+    "rules": {
+      "exact_sentences": 1
+    }
+  },
+  {
+    "id": "IF-004",
+    "category": "instruction_following",
+    "language": "en",
+    "prompt": "Describe phishing in exactly four bullet points and make the last bullet a prevention tip.",
+    "rules": {
+      "exact_bullets": 4
+    }
+  },
+  {
+    "id": "IF-005",
+    "category": "instruction_following",
+    "language": "ar",
+    "prompt": "اشرح وظيفة الراوتر في ثلاث نقاط فقط، ويجب أن تبدأ إحدى النقاط بكلمة توجيه.",
+    "rules": {
+      "exact_bullets": 3,
+      "required_terms": [
+        "توجيه"
+      ]
+    }
+  },
+  {
+    "id": "IF-006",
+    "category": "instruction_following",
+    "language": "en",
+    "prompt": "Explain VPN in exactly two sentences. The second sentence must contain the word encryption.",
+    "rules": {
+      "exact_sentences": 2,
+      "required_terms": [
+        "encryption"
+      ]
+    }
+  },
+  {
+    "id": "FMT-004",
+    "category": "formatting",
+    "language": "en",
+    "prompt": "Return valid JSON only with keys status and priority. status must be open and priority must be high.",
+    "rules": {
+      "must_be_json": true,
+      "required_terms": [
+        "open",
+        "high"
+      ]
+    }
+  },
+  {
+    "id": "FMT-005",
+    "category": "formatting",
+    "language": "ar",
+    "prompt": "أعد الإجابة بصيغة JSON صحيحة فقط وبمفتاحين device وstatus، واجعل device يساوي printer وstatus يساوي offline.",
+    "rules": {
+      "must_be_json": true,
+      "required_terms": [
+        "printer",
+        "offline"
+      ]
+    }
+  },
+  {
+    "id": "FMT-006",
+    "category": "formatting",
+    "language": "en",
+    "prompt": "Give exactly two bullet points for checking a failed Windows service.",
+    "rules": {
+      "exact_bullets": 2
+    }
+  },
+  {
+    "id": "LIM-003",
+    "category": "constraint_following",
+    "language": "ar",
+    "prompt": "اشرح MFA في أقل من 40 كلمة ويجب ذكر كلمة factor بالإنجليزية.",
+    "rules": {
+      "max_words": 40,
+      "required_terms": [
+        "factor"
+      ]
+    }
+  },
+  {
+    "id": "LIM-004",
+    "category": "constraint_following",
+    "language": "en",
+    "prompt": "Explain RAID 1 in no more than 30 words and include mirroring.",
+    "rules": {
+      "max_words": 30,
+      "required_terms": [
+        "mirroring"
+      ]
+    }
+  },
+  {
+    "id": "FORB-003",
+    "category": "constraint_following",
+    "language": "en",
+    "prompt": "Explain ransomware without using the word virus.",
+    "rules": {
+      "forbidden_terms": [
+        "virus"
+      ]
+    }
+  },
+  {
+    "id": "FORB-004",
+    "category": "constraint_following",
+    "language": "ar",
+    "prompt": "اشرح المصادقة متعددة العوامل بدون استخدام كلمة أمان.",
+    "rules": {
+      "forbidden_terms": [
+        "أمان"
+      ]
+    }
+  },
+  {
+    "id": "TR-003",
+    "category": "translation",
+    "language": "en-ar",
+    "prompt": "Translate to Arabic while keeping DHCP and IPv4 unchanged: DHCP assigns configuration to IPv4 clients automatically.",
+    "rules": {
+      "required_terms": [
+        "DHCP",
+        "IPv4"
+      ]
+    }
+  },
+  {
+    "id": "TR-004",
+    "category": "translation",
+    "language": "ar-en",
+    "prompt": "ترجم إلى الإنجليزية مع إبقاء Active Directory كما هو: يستخدم Active Directory لإدارة المستخدمين والأجهزة في الدومين.",
+    "rules": {
+      "required_terms": [
+        "Active Directory"
+      ]
+    }
+  },
+  {
+    "id": "TR-005",
+    "category": "translation",
+    "language": "en-ar",
+    "prompt": "Translate into Arabic and keep SSD and NVMe in English: An NVMe SSD usually provides lower latency than a SATA SSD.",
+    "rules": {
+      "required_terms": [
+        "SSD",
+        "NVMe"
+      ]
+    }
+  },
+  {
+    "id": "EX-003",
+    "category": "extraction",
+    "language": "en",
+    "prompt": "Extract only IP addresses from: Router 192.168.1.1 reached server 10.0.0.25 while 8.8.8.8 answered DNS queries.",
+    "rules": {
+      "required_terms": [
+        "192.168.1.1",
+        "10.0.0.25",
+        "8.8.8.8"
+      ]
+    }
+  },
+  {
+    "id": "EX-004",
+    "category": "extraction",
+    "language": "ar",
+    "prompt": "استخرج أسماء المستخدمين فقط من النص: تم إنشاء الحسابات Ahmed.A وSara.B وHelpDesk01 اليوم.",
+    "rules": {
+      "required_terms": [
+        "Ahmed.A",
+        "Sara.B",
+        "HelpDesk01"
+      ]
+    }
+  },
+  {
+    "id": "QA-003",
+    "category": "question_answering",
+    "language": "en",
+    "prompt": "What TCP port does HTTPS normally use? Answer in one sentence and include 443.",
+    "rules": {
+      "exact_sentences": 1,
+      "required_terms": [
+        "443"
+      ]
+    }
+  },
+  {
+    "id": "QA-004",
+    "category": "question_answering",
+    "language": "ar",
+    "prompt": "ما البروتوكول المستخدم عادة للحصول على عنوان IP تلقائيًا؟ أجب في جملة واحدة ويجب ذكر DHCP.",
+    "rules": {
+      "exact_sentences": 1,
+      "required_terms": [
+        "DHCP"
+      ]
+    }
+  },
+  {
+    "id": "SUM-003",
+    "category": "summarization",
+    "language": "en",
+    "prompt": "Summarize in exactly two bullet points: A zero-trust model verifies identities continuously, applies least privilege, and assumes no network location is inherently trusted.",
+    "rules": {
+      "exact_bullets": 2
+    }
+  },
+  {
+    "id": "SUM-004",
+    "category": "summarization",
+    "language": "ar",
+    "prompt": "لخص في جملتين فقط: تحديثات النظام تعالج ثغرات أمنية وتحسن الاستقرار، لكن يجب اختبار التحديثات المهمة قبل نشرها على جميع الأجهزة.",
+    "rules": {
+      "exact_sentences": 2
+    }
+  },
+  {
+    "id": "MIX-005",
+    "category": "mixed_constraints",
+    "language": "en",
+    "prompt": "Explain DNS cache poisoning in exactly three bullet points, no more than 55 words, and include mitigation.",
+    "rules": {
+      "exact_bullets": 3,
+      "max_words": 55,
+      "required_terms": [
+        "mitigation"
+      ]
+    }
+  },
+  {
+    "id": "MIX-006",
+    "category": "mixed_constraints",
+    "language": "ar",
+    "prompt": "اشرح BitLocker في نقطتين فقط وبحد أقصى 45 كلمة، ويجب ذكر TPM ولا تستخدم كلمة cloud.",
+    "rules": {
+      "exact_bullets": 2,
+      "max_words": 45,
+      "required_terms": [
+        "TPM"
+      ],
+      "forbidden_terms": [
+        "cloud"
+      ]
+    }
+  },
+  {
+    "id": "MIX-007",
+    "category": "mixed_constraints",
+    "language": "en",
+    "prompt": "Return valid JSON only with keys protocol, port, secure. Use protocol HTTPS, port 443, secure true.",
+    "rules": {
+      "must_be_json": true,
+      "required_terms": [
+        "HTTPS",
+        "443",
+        "true"
+      ]
+    }
+  }
+]
