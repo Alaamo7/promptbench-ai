@@ -1,5 +1,7 @@
 # PromptBench AI
 
+[![CI](https://github.com/Alaamo7/promptbench-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/Alaamo7/promptbench-ai/actions/workflows/ci.yml)
+
 PromptBench AI is a Gradio application for testing how well a language model follows a prompt. It combines deterministic rule checks with an LLM judge, produces weighted criterion scores, and supports single tests, batch benchmarks, analytics, run history, and same-case multi-model comparisons.
 
 ## Live demo
@@ -46,6 +48,7 @@ Gradio UI (app.py)
 ```
 
 See [Architecture](docs/architecture.md) for the component and data-flow details.
+The evidence classification used by this portfolio is recorded in [Source Audit](docs/source-audit.md).
 
 ## Project structure
 

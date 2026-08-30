@@ -22,7 +22,7 @@ Audit date: 2026-08-30. Offline environment: Python 3.12.13. Live provider crede
 | Historical public credential | Removed value is also revoked/rotated | Rotation cannot be verified from source | PARTIAL | Historical secret alert; see security issue |
 | Live Hugging Face UI | Public interface exists | Genuine screenshots verified; Space observed sleeping | PARTIAL | `docs/assets/phase6_*.png`, live Space |
 | Live target/evaluator API | Authorized target response and judge result returned now | Not executed during mirror; no credential used | NOT TESTED | Opt-in integration workflow only |
-| CI run on GitHub | Offline test, dependency, syntax and secret jobs complete | Pending first GitHub Actions run | NOT TESTED | `.github/workflows/ci.yml` |
+| CI run on GitHub | Offline test, dependency, syntax and secret jobs complete | Run #1 completed successfully: offline and secret-scan passed; credentialed integration skipped by design | PASS | [GitHub Actions run #1](https://github.com/Alaamo7/promptbench-ai/actions/runs/33302726113) |
 
 ## Coverage by requested category
 
